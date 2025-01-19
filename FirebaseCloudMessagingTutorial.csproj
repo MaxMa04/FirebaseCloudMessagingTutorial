@@ -70,9 +70,14 @@
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
   		<GoogleServicesJson Include="google-services.json" />
-	</ItemGroup>	
-		
-	
+	</ItemGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+		<RuntimeIdentifiers>ios-arm64</RuntimeIdentifiers>
+		<CodesignKey>Your Codesign key</CodesignKey>
+		<CodesignProvision>Your provisioning profile name</CodesignProvision>
+		<MtouchNoSymbolStrip>True</MtouchNoSymbolStrip>
+	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
   		<BundleResource Include="GoogleService-Info.plist" />
 	</ItemGroup>		
