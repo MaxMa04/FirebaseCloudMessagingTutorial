@@ -68,13 +68,13 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="3.1.2" />
 	</ItemGroup>
-<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
-  <GoogleServicesJson Include="google-services.json" />
-</ItemGroup>	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
-		<GoogleServicesJson Include="google-services.json" />
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
+  		<GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>	
+		
 	
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
-  <BundleResource Include="GoogleService-Info.plist" />
-</ItemGroup>		<BundleResource Include="GoogleService-Info.plist" />
+  		<BundleResource Include="GoogleService-Info.plist" />
+	</ItemGroup>		
 	
 </Project>
